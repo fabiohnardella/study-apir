@@ -27,7 +27,9 @@ public class ProdutoController {
 
     @PostMapping
     public ResponseEntity<Produto> create(@RequestBody Produto produto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.createOrUpdate(produto));
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(service.createOrUpdate(produto));
     }
 
     @GetMapping("/{id}")
